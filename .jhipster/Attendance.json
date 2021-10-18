@@ -1,0 +1,95 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [
+    {
+      "relationshipName": "employee",
+      "otherEntityName": "employee",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "name",
+      "otherEntityRelationshipName": "attendance"
+    },
+    {
+      "relationshipName": "employeeSalary",
+      "otherEntityName": "employeeSalary",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "attendance"
+    },
+    {
+      "relationshipName": "department",
+      "otherEntityName": "department",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "attendance"
+    },
+    {
+      "relationshipName": "designation",
+      "otherEntityName": "designation",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "attendance"
+    },
+    {
+      "relationshipName": "line",
+      "otherEntityName": "line",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "attendance"
+    },
+    {
+      "relationshipName": "grade",
+      "otherEntityName": "grade",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "attendance"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "attendanceTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "machineNo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "markedAs",
+      "fieldType": "AttendanceMarkedAs",
+      "fieldValues": "R,WR,HR,WO,HO",
+      "fieldValidateRules": []
+    },
+    {
+      "fieldName": "leaveApplied",
+      "fieldType": "LeaveAppliedStatus",
+      "fieldValues": "YES,NO"
+    },
+    {
+      "fieldName": "employeeMachineId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeCategory",
+      "fieldType": "EmployeeCategory",
+      "fieldValues": "TOP_LEVEL,MID_LEVEL,STAFF,WORKER"
+    },
+    {
+      "fieldName": "employeeType",
+      "fieldType": "EmployeeType",
+      "fieldValues": "PERMANENT,TEMPORARY,PART_TIME,CONTRACTUAL"
+    }
+  ],
+  "changelogDate": "20210108055117",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "serviceClass",
+  "entityTableName": "attendance",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": true,
+  "pagination": "pagination"
+}
